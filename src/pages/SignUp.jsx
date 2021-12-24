@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import { Button, Form, Grid, Image,Icon } from "semantic-ui-react";
 import LogoPicture from "../images/NewPic.png";
 
@@ -64,7 +65,7 @@ export default function SignUp() {
               iconPosition="left"
               placeholder="Please Enter Birth Date like 1999-08-25"
             />
-            <Button icon color="red">
+            <Button as={NavLink} to="/jobs" icon color="red">
               <Icon name="sign in"/>
               Start To Jurney
             </Button>

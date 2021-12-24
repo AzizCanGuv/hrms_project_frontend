@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, NavLink } from "react-router-dom";
 import {
   Button,
   Form,
@@ -9,6 +10,7 @@ import {
   Segment,
 } from "semantic-ui-react";
 import LogoPicture from "../images/NewPic.png";
+import SignUp from "./SignUp";
 
 export default function Login() {
   return (
@@ -40,13 +42,13 @@ export default function Login() {
                 type="password"
               />
 
-              <Button color="teal" fluid size="large">
+              <Button  as={NavLink} to="/home" color="teal" fluid size="large">
                 Login
               </Button>
             </Segment>
           </Form>
           <Message>
-            New to us? <a href="#">Sign Up</a>
+            New to us? <Link to="/signup">Sign Up</Link>
           </Message>
         </Grid.Column>
       </Grid>

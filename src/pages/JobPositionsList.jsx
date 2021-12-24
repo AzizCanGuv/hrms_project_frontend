@@ -10,7 +10,7 @@ export default function JobPositionsList() {
     jobPositionService
       .getJobPositions()
       .then((result) => setJobPositions(result.data.data));
-  });
+  },[]);
   return (
     <div>
       <Menu inverted pointing vertical>
